@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media queries</title>
+  <style>
+    body{
+      padding-top: 1000px;
+      height: 1000px;
+    }
+    .container{
+      width: 1000px;
+      height: 500px;
+      margin: auto;
+      background-color: red;
+      color: white;
+      text-align: center;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation-name: sr;
+      animation-timing-function: ease;
+      animation-duration: 3s;
+      /* animation-iteration-count: 3;*/
+      animation-timeline: view();
+      animation-range: entry 1% exit 10%;
+
+    }
+    @media (max-width: 600px){
+      .container{
+        width: 100px;
+        background-color: blue;
+      }
+    }
+    @media (max-width: 800px){
+      .container{
+        width: 600px;
+        border-radius: 50px;
+        background-color: pink;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+      }
+    }
+    .container:hover{
+      background-color: green;
+      transition: all 0.5s ease;
+      /* transform: scaleX(1.1); */
+      /* transform: scaleY(1.1); */
+      /* transform: translate(10px, 50px); */
+      /* transform: rotate(360deg);  */
+
+    }
+    @keyframes sr{
+      0%{
+        transform: translateX(-150px);
+        /* transform: rotateY(0deg); */
+      }
+      50%{
+        transform: translateX(-100px);
+        /* transform: rotateY(180deg) */
+      }
+      100%{
+        transform: translateX(0px);
+        background-color:blue;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="content">
+      This ia a container
+    </div>
+  </div>
+</body>
+</html>

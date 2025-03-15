@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 The Moon Awaits – Spin, Zoom & Discover!</title>
+    <style>
+        /* Global Styles */
+        body {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        .home-link{
+          color: white; 
+          text-decoration: none;
+        }
+
+        /* Header Styles */
+        header {
+            background: #111;
+            padding: 10px;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Main Content */
+        main {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 0;
+        }
+
+        /* 3D Model Viewer */
+        model-viewer {
+            width: 90%;
+            height: 75vh;
+            max-width: 100%;
+            aspect-ratio: 1/1; /* Keeps the Moon circular */
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #111;
+            padding: 10px;
+            font-size: 14px;
+            width: 100%;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .social-links a img {
+            width: 30px;
+            height: 30px;
+            filter: invert(1); /* Makes icons visible on dark background */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+      <h1><a class="home-link" href="/HTML/index.html">🚀 The Moon Awaits – Spin, Zoom & Discover!</a></h1>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="/HTML/about.html">About</a>
+            <a href="https://science.nasa.gov/moon/" target="_blank">Explore</a>
+            <a href="https://www.pinterest.com/search/pins/?q=Moon&rs=typed" target="_blank">Gallery</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section id="home">
+            <p>Spin the Moon and explore its surface! Click and zoom to reveal hidden details.</p>
+        </section>
+
+        <!-- 3D Model Viewer -->
+        <model-viewer 
+            src="/assets/moon.glb" 
+            alt="3D Model of the Moon" 
+            auto-rotate 
+            camera-controls 
+            shadow-intensity="1"
+            ar
+            interaction-prompt="none"
+            disable-tap>
+        </model-viewer>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>Created by Sachin Raut | 3D Model from NASA Open Data</p>
+        <p>© 2025 All Rights Reserved</p>
+        
+        <!-- Social Media Links -->
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/sachin-raut-b5b360302/" target="_blank">
+                <img src="/images/linkedin.png" alt="LinkedIn">
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=100034520466481" target="_blank">
+                <img src="/images/facebook.png" alt="Facebook">
+            </a>
+            <a href="https://github.com/rautsachin" target="_blank">
+                <img src="/images/github.png" alt="GitHub">
+            </a>
+            <a href="mailto:sachinrajrautkvt123@gmail.com">
+                <img src="/images/gmail.png" alt="Gmail">
+            </a>
+        </div>
+    </footer>
+
+    <!-- Model Viewer Script -->
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+
+</body>
+</html>
